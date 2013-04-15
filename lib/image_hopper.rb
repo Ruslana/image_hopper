@@ -22,7 +22,7 @@ module ImageHopper
       parse = URI.parse(site_url)
       content = open(parse).read
       
-      content.scan(/['"]+([^'"]+\.(?:#{IMAGE_EXTENSIONS.join('|')}))[^'"]*['"]+/i) {|result| 
+      content.scan(/['"]+([^'"]+\.(?:#{Image::IMAGE_EXTENSIONS.join('|')}))[^'"]*['"]+/i) {|result| 
         line = result[0]; 
         line.gsub!(/^.*?url\(/,''); 
         line.gsub!(/\)/,''); 
