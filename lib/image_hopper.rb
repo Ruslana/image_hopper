@@ -1,3 +1,6 @@
+require "open-uri"
+require "net/http"
+
 require "image_hopper/version"
 require "image_hopper/image"
 
